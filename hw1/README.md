@@ -27,12 +27,15 @@ mongoimport --db analytics --collection customers --file /data/db/customers.json
 Рассмотрим данные подробнее с помощью команды `db.collection_name.find()`.
 
 `db.accounts.find()`
+
 <img src="pics/6-accounts.png" alt="drawing" width="500"/>
 
 `db.customers.find()`
+
 <img src="pics/7-customers.png" alt="drawing" width="500"/>
 
 `db.transactions.find()`
+
 <img src="pics/8-transactions.png" alt="drawing" width="500"/>
 
 Так же можем задать фильтры, в данном случае по лимиту у аккаунты (меньше 1000).
@@ -70,6 +73,7 @@ mongoimport --db analytics --collection customers --file /data/db/customers.json
 <img src="pics/17-no.png" alt="drawing" width="500"/>
 
 Теперь с индексами. Время: 233мс.
+
 <img src="pics/18-indexes.png" alt="drawing" width="500"/>
 
 Казалось, что такие индексы увеличат производительность, однако прибавки не заметно. Хотя каждая публикация имеет номер и казалось бы, что это поле  должно быть хорошим для индексации.
